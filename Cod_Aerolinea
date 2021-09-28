@@ -1,0 +1,112 @@
+# Act_Apropiacion4
+
+using System;
+
+namespace Aerolinea
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("BIENVENIDOS A LA AEROLINEA");
+
+
+            int numero_paises = 3;
+            string lugares = "USA, Mexico, Espana";
+            int viajeros_frecuentes = 15000;
+            long costo_tiquetes = 3200000;
+            int capacidad_aviones = 400;
+            int numero_empleados = 4000;
+            long sueldo = 2800000;
+
+            System.Console.WriteLine($"paises a los que llega la aerolinea: {numero_paises}");
+            System.Console.WriteLine($"paises mas visitados son: {lugares}");
+            System.Console.WriteLine($"cuenta con una suma importanten de viajeros frecuentes de: {viajeros_frecuentes}");
+            System.Console.WriteLine("todos sus aviones cuentan con una capacidad de: " + (capacidad_aviones) + " sillas");
+            System.Console.WriteLine($"sus empleados son aproximadamente: {numero_empleados} y su salrio es: {sueldo}");
+            System.Console.WriteLine($"es una de las aerolineas mas economicas con un costo de: {costo_tiquetes} por persona");
+            
+
+            // la aerolinea para promover sus viajes esta dando un descuento a los menores de edad del 40%
+            // que tengan mas de 10 viajes con la compañia.
+
+            System.Console.WriteLine("¿Cual es tu nombre?");
+            string nombre = Console.ReadLine();
+            
+            
+            System.Console.WriteLine("¿Cual es tu edad?");
+            int edad = Convert.ToInt32(Console.ReadLine());
+            System.Console.WriteLine("¿Cuántas veces has vijado con nosotros?");
+            int numviajes = Convert.ToInt32(Console.ReadLine());
+
+
+            int parametro = 18;
+            int parametro2 = 10
+            string mensaje_uno = "Tienes una edad adecuada para viajar";
+            string mensaje_dos = "Tienes un descuento del 40%";
+            string mensaje_tres = "El tiquete te queda en este valor: 1.920.000";
+            string mensaje_cuatro = "Te falta cumplir el numero de viajes para adquirir el descuento";
+            string mensaje_cinco = "No tienes descuentos en tu tiquete";
+
+
+
+
+            if(edad >= parametro)
+            {
+                Console.WriteLine(mensaje_uno);
+
+                if(viajes>= parametro2 )
+                {
+                    System.Console.WriteLine(mensaje_dos);
+               
+                    System.Console.WriteLine(mensaje_tres);
+                }
+                else
+                {
+                   System.Console.WriteLine(mensaje_cuatro);
+                }
+               
+             }
+            else
+            {
+                System.Console.WriteLine(mensaje_cinco);
+            }
+            
+
+            //la aero linea posee paquetes de viaje entre paises que mejora el precio de sus pasajes
+
+            Console.WriteLine("elija el paquete que mas le gusta");
+            System.Console.WriteLine(" paquete 1. Mexico y USA 20% de descuento");
+            System.Console.WriteLine("paquete 2. USA Y Espana 10% de descuento");
+
+            int opcion = Convert.ToInt32(Console.ReadLine());
+
+           
+
+            switch (opcion)
+            {
+                case (1):
+
+                System.Console.WriteLine("El paquete 1 te queda en: 2.560.000");
+                break;
+
+                case (2):
+
+                System.Console.WriteLine("El paquete 2 te queda en: 2.880.000");
+                break;
+
+                default:
+                System.Console.WriteLine("La opcion no esta habilitada aun");
+                break;
+
+                
+            }
+
+
+
+
+
+
+        }
+    }
+}
