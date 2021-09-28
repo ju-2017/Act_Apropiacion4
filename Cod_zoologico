@@ -1,0 +1,112 @@
+# Act_Apropiacion4
+
+using System;
+
+namespace Zoologico
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("BIENVENIDOS AL ZOOLOGICO");
+
+            int jaulas = 400;
+            int tigres = 5;
+            int aves = 10;
+            int peses = 300;
+            string veterinarios = "Juan y Yezenia";
+            string cuidadores = "Jose y Melissa";
+            int cc_juan = 10020307;
+            int cc_yeze = 10270976;
+            
+            
+            int carne = 300;
+            int costo_entradas = 25000;
+            int perso_permitido = 1000;
+            long salario_veterinarios = 2500000;
+            long salario_cuidadores = 1500000;
+           
+
+            System.Console.WriteLine($"el zoologico cuenta cuenta con: {jaulas} jaulas, con {tigres} tigres");
+            System.Console.WriteLine($"con {aves} aves, con {peses} peses");
+            System.Console.WriteLine($"sus veterinarios de cabecera son: {veterinarios}, los cuidadores son: {cuidadores}");
+            System.Console.WriteLine($"cuyos sueldos son: {veterinarios} {salario_veterinarios}, {cuidadores} {salario_cuidadores}");
+            System.Console.WriteLine($"diariamente los leones consumen: {carne} kilos de carne");
+            System.Console.WriteLine($"el costo de las entradas es de {costo_entradas} y el aforo permitido es de: {perso_permitido} personas");
+
+            //actualemente se requiere diseñar un sistema que cuente con la segura suficientes para que 
+            // solo los veterinarios tengan ingreso a los medicamenros de los animales.
+
+            int cc; 
+
+            do
+            {
+
+            System.Console.WriteLine("Buenos días por favor ingrese su Cedula");
+                
+             CC = Convert.ToInt32(Console.ReadLine());
+            
+
+                
+            } while (cc != cc_juan && cc != cc_yeze);
+
+
+
+
+            if(cc== cc_juan)
+            {
+
+              System.Console.WriteLine("Buenos dias doctor Juan, puede pasar");
+
+                        if(cc == cc_yeze)
+                        {
+                            System.Console.WriteLine("Buenos días doctora Yezenia puede pasar");
+
+                        }
+
+
+
+            }
+            else
+            {
+                System.Console.WriteLine("su cc no es válido, no puedes pasar");
+            }
+
+                // se quiere introducir un sistema que controle el aforo al zoológico
+
+                int boleta = 1000;
+
+                do
+                {
+
+                    System.Console.WriteLine("ingrese la boleta");
+
+                    boleta = Convert.ToInt32(Console.ReadLine());
+                    
+                } while (boleta < 1000);
+
+                     if(boleta < 1000)
+                      {
+                          System.Console.WriteLine("puede pasar");
+                      } 
+                    else
+                    {
+                        System.Console.WriteLine("El Zoologico ya se encuentra en su aforo completo, lo esperamos en una proxima ocasion");
+                    }
+
+                    // hay unas jaulas que son usadas como deposito de alimentos
+                    // se necesita saber siempre por cuestiones de personal nuevo cuales son
+
+                    int[] jaulas_almac = {300, 100, 30, 90, 150};
+
+
+                        for(int jaulas = 0; jaulas < jaulas_almac.Length; jaulas++)
+                        {
+                            System.Console.WriteLine("jaula " + (jaulas + 1) + " es alamcen " + jaulas_almac[jaulas]);
+                        }
+
+
+
+        }
+    }
+}
